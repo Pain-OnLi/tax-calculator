@@ -15,12 +15,6 @@ class TestItem(unittest.TestCase):
     test_item_6 = Item.Item("1 imported crate of Almond Snickers", "75.99")
     test_bad_item = Item.Item("bad", "input")
 
-    # def test_parse_item_text(self):
-    #     item_1_split_by_at = self.test_item_1.parse_item_text()
-    #     bad_input = self.test_bad_item.parse_item_text()
-    #     self.assertEqual(item_1_split_by_at[0], "1 16lb bag of Skittles")
-    #     self.assertEqual(bad_input, "Improper Format")
-
     def test_is_item_imported(self):
         self.assertFalse(self.test_item_1.is_item_imported())
         self.assertTrue(self.test_item_4.is_item_imported())
