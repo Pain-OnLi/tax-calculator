@@ -8,11 +8,11 @@ class Basket:
     basket_total_price = 0.00
     basket_total_tax = 0.00
 
-    def __init__(self, basket_name):
+
+    def set_basket_name(self, basket_name):
+        """Sets the basket name"""
         self.basket_name = basket_name
-        # self.basket_total_price = 0.00
-        # self.basket_total_sales_tax = 0.00
-    
+
 
     def parse_item_text(self, item_text):
         """Function takes the full text of an item and breaks it up into the price and the item name"""
@@ -44,3 +44,10 @@ class Basket:
         """Rounds the money to the nearest penny to deal with python's math precision issues"""
 
         return round(money/0.01) * 0.01 
+
+    def empty_basket(self):
+        self.basket_name = None
+        self.basket_items = None
+        self.basket_items = list()
+        self.basket_total_price = 0.00
+        self.basket_total_tax = 0.00

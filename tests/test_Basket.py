@@ -7,11 +7,11 @@ sys.path.append(os.path.abspath('../src'))
 import Basket
 
 class TestBasket(unittest.TestCase):
-    test_basket = Basket.Basket("Basket 1")
+    test_basket = Basket.Basket()
 
-    def test_constructor(self):
-        self.assertEqual(self.test_basket.basket_name, "Basket 1")
-
+    def test_set_basket_name(self):
+        self.test_basket.set_basket_name("Basket1")
+        self.assertEqual(self.test_basket.basket_name, "Basket1")
 
     def test_parse_item_text(self):
         item_text_broken_up_by_price_and_name = self.test_basket.parse_item_text("1 16lb bag of Skittles at 16.00")
